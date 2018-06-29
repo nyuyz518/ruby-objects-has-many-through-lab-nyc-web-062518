@@ -15,9 +15,10 @@ class Patient
   end 
   
   def appointments 
-    Appointments.all.select do |ticket|
-       == self
+    Appointments.all.select do |appointment|
+      appointment.self
     end
+  end 
     
     
     
